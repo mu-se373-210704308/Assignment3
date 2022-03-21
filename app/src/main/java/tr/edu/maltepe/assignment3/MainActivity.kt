@@ -12,13 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btn_click_me = findViewById(R.id.button) as Button
+        // defined button,text and counter
+        val buttonClick = findViewById(R.id.button) as Button
         val myTextView = findViewById(R.id.textView2) as TextView
-        var timesClicked = 0
+        var counter = 0
+
         // set on-click listener
-        btn_click_me.setOnClickListener {
-            timesClicked = timesClicked + 1
-            myTextView.text = timesClicked.toString()
+        buttonClick.setOnClickListener {
+            // in the next line, increases the value by 1 each time when the button is clicked.
+            counter = counter + 1
+
+            // the next line makes the counter appear on the screen
+            myTextView.text = counter.toString()
         }
 
     }
